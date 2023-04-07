@@ -11,8 +11,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script>
+			function hideAndSeek() {
+				document.body.style="visibility:hidden";
+				setTimeout(() => {document.body.style="visibility:visible"}, 3000);
+			}
+		</script>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="hideAndSeek()">
 		
 		<iframe style="visibility:hidden" width="1" height="1" src="https://www.youtube.com/embed/g4mHPeMGTJM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -49,7 +55,7 @@
 										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/pic10.jpg" loading="eager" fetchpriority="high" alt="" />
+										<img src="images/pic10.jpg" loading="lazy" fetchpriority="high" alt="" />
 									</span>
 								</section>
 
