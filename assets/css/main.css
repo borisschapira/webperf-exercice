@@ -65,6 +65,23 @@ html body section img {
 }
 
 
+/* The embarassing visual that no one can see */
+.nemo{
+  position: absolute;
+  top: 0;
+  left: -5000px;
+
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto;
+  background: url(https://tests.boris.schapira.dev/assets/proxy.php?file=nemo/img1.png&sleep=100), url(https://tests.boris.schapira.dev/assets/proxy.php?file=nemo/img2.png&sleep=3000), url(https://tests.boris.schapira.dev/assets/proxy.php?file=nemo/img3.jpeg&sleep=1000);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 30%,30%, cover;
+  background-position: 70% 50%,25% 50%,center;
+}
+  
+
+
 /* Original CSS*/
 
 @import url(fontawesome-all.min.css);
