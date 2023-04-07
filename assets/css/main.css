@@ -4,6 +4,65 @@ html body section img {
   object-fit: cover;
 }
 
+.noto1{
+  font-weight: 100;
+  font-style: italic;
+}
+
+.noto2{
+  font-weight: 200;
+  font-style: italic;
+}
+
+.noto3{
+  font-weight: 300;
+  font-style: italic;
+}
+
+.noto4{
+  font-weight: 400;
+  font-style: italic;
+}
+
+.noto5{
+  font-weight: 500;
+  font-style: italic;
+}
+
+.noto6{
+  font-weight: 600;
+  font-style: italic;
+}
+
+.noto7{
+  font-weight: 100;
+  font-style: normal;
+}
+
+.noto8{
+  font-weight: 200;
+  font-style: oblique;
+}
+
+.noto9{
+  font-weight: 300;
+  font-style: normal;
+}
+
+.noto10{
+  font-weight: 400;
+  font-style: oblique;
+}
+
+.noto11{
+  font-weight: 500;
+  font-style: normal;
+}
+
+.noto12{
+  font-weight: 600;
+  font-style: oblique;
+}
 
 
 /* Original CSS*/
@@ -102,7 +161,7 @@ body {
 /* Type */
 body, input, select, textarea {
   color: #7f888f;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
   line-height: 1.65; }
