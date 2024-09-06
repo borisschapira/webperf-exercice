@@ -18,7 +18,8 @@
 			}
 		</script>
 	</head>
-	<body class="is-preload" onload="hideAndSeek()">
+	<body class="is-preload">
+		<script>hideAndSeek()</script>
 		
 		<iframe style="visibility:hidden" width="1" height="1" src="https://www.youtube.com/embed/g4mHPeMGTJM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -259,5 +260,44 @@
 
 			<div class="nemo">
 			</div>
+
+			<script>
+				// this observer will output the longtask to the console
+				var observer = new PerformanceObserver(function (list) {
+					var perfEntries = list.getEntries();
+					for (var i = 0; i < perfEntries.length; i++) {
+						console.log(`task #${++counter}:`, perfEntries[i]);
+					}
+				});
+		
+				let counter = 0;
+		
+				// with this timer, we ensure a longtask every 2 second
+				var tref = Date.now();
+				fireLongTask();
+				var myTimer = setInterval(fireLongTask, 300);
+		
+				// register observer for long task notifications
+				observer.observe({
+					entryTypes: ["longtask"]
+				});
+		
+				function fireLongTask() {
+					var t1, t0 = Date.now(),
+						i = 1,
+						j = 2,
+						k;
+					while (true) {
+						t1 = Date.now();
+						k = i;
+						i = j;
+						j = k + j
+						if ((t1 - t0) > 101) break;
+					}
+					if ((t1 - tref) > 40000) {
+						clearInterval(myTimer);
+					}
+				}
+			</script>
 	</body>
 </html>
